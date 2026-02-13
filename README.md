@@ -20,6 +20,6 @@ _**Setup:**_
 
 **CONGRATULATIONS!!! 🥳 You've succesfully built your own Wearable Sensor that you can use and enjoy wherever you desire!**
 
-Thank you so much for taking the time to build your own! Feel free to modify the code, glasses, or Pi to best fit your needs and share your creation with others!
+Thank you so much for taking the time to build your own! Feel free to modify the project fit your needs and share your creation with others!
 
 -- X (X's email), Y (Y's email), Z (Z's email), A (A's email)
