@@ -1,4 +1,4 @@
-# wearablesensor
+# Wearable Sensor
 
 _**About This Project:**_
 
