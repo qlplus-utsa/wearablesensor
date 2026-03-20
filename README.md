@@ -18,7 +18,8 @@ Heart Rate Sensor Module MAX30102 (Arduino Compatible): [https://a.co/d/0g5pY85o
 
 120pcs Breadboard Jumper Wires 20cm Wire: [https://a.co/d/08JQEu3K]
 
-Breadbord: [Arty]
+ELEGOO Breadboard 830 Point Solderless: [https://a.co/d/044U4O8P]
+
 
 _**Setup:**_
 
