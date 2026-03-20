@@ -10,8 +10,11 @@ Here's a demonstration of Wearable Sensor! https://youtu.be/xxxx
 
 _**Materials Used:**_
 
-X [give important detail/requirement of material]: https://yyy.com/xxxx
-
+ELEGOO UNO R3 Board: [https://a.co/d/0aggOWlQ]
+0.96" OLED i2c Display Module Screen: [https://a.co/d/0e8LvMpk]
+Heart Rate Sensor Module MAX30102 (Arduino Compatible): [https://a.co/d/0g5pY85o]
+120pcs Breadboard Jumper Wires 20cm Wire: [https://a.co/d/08JQEu3K]
+Breadbord: [Arty]
 _**Setup:**_
 
 1. Begin connecting...
