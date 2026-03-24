@@ -1,66 +1,3 @@
-Briana S
-briana.jisel
-Online
-
-Arty - Implementation Director — 2/20/26, 9:50 PM
-thank you jessica! working on y’all’s heartrate monitor right now 🙂‍↕️ (edit: it works! see y'all next friday) 
-
-Arty - Implementation Director — 2/24/26, 9:22 AM
-Hi y'all! Just a quick reminder we're meeting again this Friday in the same spot and same time! We're going to start work connecting the Arduino to the heartrate sensor and get comfortable with some basic parts of coding!
-Arty - Implementation Director — 2/27/26, 10:24 AM
-Hi @everyone! We will be meeting again today at 5pm in the Makerspace 1.150S room! I can’t wait to see y’all there 😁
-Arty - Implementation Director — 2/27/26, 5:34 PM
-#include <Wire.h>
-#include "MAX30105.h"
-
-MAX30105 particleSensor;
-
-void setup() {
-  Serial.begin(9600);
-
-  // Initialize sensor
-  if (particleSensor.begin() == false) {
-    Serial.println("MAX30102 was not found. Please check wiring/power.");
-    while (1)
-      ;
-  }
-
-  particleSensor.setup();  //Configure sensor. Use 6.4mA for LED drive
-
-
-}
-
-void loop() {
-  Serial.print(" R[");
-  Serial.print();
-  Serial.print("] IR[");
-  Serial.print();
-  Serial.println("]");
-}
-Arty - Implementation Director — 2/27/26, 6:33 PM
-Wearable Sensor - Meeting 3
-
-Attendees: Jessica, Briana, Arty
-
-⦁    Successfully installed new "SparkFun MAX3010x Pulse and Proximity Sensor Library" on laptops [Arduino IDE Library]
-⦁    Got MAX30102 sensor working and reading and writing values
-⦁    Taught Briana and Jessica how MAX30102 and any sensor use variables from Arduino to get, store, and receive data 
-NO MEETING ON MARCH 6, Enjoy your spring break and good luck on your tests! 
-For our next meeting on March 21st, we will be getting our Heartrate level on the screen and [maybe] attempt to combine the Heartrate, Temperature, and Blood Oxygen Level codes together! I hope to see y'all then!!!
-Arty - Implementation Director — 3/16/26, 2:41 PM
-Hi y'all! I hope you had an amazing, safe, and fun spring break!!! 😁 
-
-Just a quick reminder we're meeting again this Friday in the same spot and same time!
-
-We're going to start connecting the Arduino, heartrate sensor, and screen together to hopefully showing some measurements in real time!!! 👀 
-Arty - Implementation Director — 2:49 PM
-Hi @everyone! We will be meeting again today at 5pm in the Makerspace 1.150S room! I can’t wait to see y’all there 😁
-Arty - Implementation Director — 5:05 PM
-https://docs.google.com/spreadsheets/d/1eMQ5dJIlD62NlV5QkqjfNsDGxVgmM7CR2lv15l977lI/edit?gid=193945536#gid=193945536
-Google Docs
-Copy of Bill of Materials Template - Briana10
-Image
-Arty - Implementation Director — 6:03 PM
 #include <Wire.h>
 #include "MAX30105.h"
 #include "heartRate.h"
@@ -82,7 +19,7 @@ long lastBeat = 0;
 float beatsPerMinute = 0;
 int beatAvg = 0;
 
-// 🔥 NEW: display timing control
+// display timing control
 unsigned long lastDisplayUpdate = 0;
 const int displayInterval = 200; // ms
 
@@ -91,7 +28,7 @@ void setup()
   Serial.begin(115200);
   Serial.println("Initializing...");
 
-  // 🔥 FIX 1: Set stable I2C speed
+  // Set stable I2C speed
   Wire.begin();
   Wire.setClock(100000); // 100kHz (important)
 
@@ -119,7 +56,7 @@ void loop()
 {
   long irValue = particleSensor.getIR();
 
-  // 🔥 Heartbeat detection
+  // Heartbeat detection
   if (checkForBeat(irValue))
   {
     long delta = millis() - lastBeat;
@@ -148,112 +85,7 @@ void loop()
   Serial.print(", Avg BPM=");
   Serial.println(beatAvg);
 
-  // 🔥 FIX 2: Update display only every 200ms
-  if (millis() - lastDisplayUpdate > displayInterval)
-  {
-    lastDisplayUpdate = millis();
-
-    display.clearDisplay();
-    display.setTextSize(1);
-    display.setTextColor(WHITE);
-    display.setCursor(0, 0);
-
-    display.println(F("WEARABLE SENSOR"));
-
-    display.print(F("BPM: "));
-... (11 lines left)
-
-message.txt
-3 KB
-﻿
-#include <Wire.h>
-#include "MAX30105.h"
-#include "heartRate.h"
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
-MAX30105 particleSensor;
-
-#define SCREEN_WIDTH 128 
-#define SCREEN_HEIGHT 64 
-
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
-
-const byte RATE_SIZE = 4;
-byte rates[RATE_SIZE];
-byte rateSpot = 0;
-
-long lastBeat = 0;
-float beatsPerMinute = 0;
-int beatAvg = 0;
-
-// 🔥 NEW: display timing control
-unsigned long lastDisplayUpdate = 0;
-const int displayInterval = 200; // ms
-
-void setup()
-{
-  Serial.begin(115200);
-  Serial.println("Initializing...");
-
-  // 🔥 FIX 1: Set stable I2C speed
-  Wire.begin();
-  Wire.setClock(100000); // 100kHz (important)
-
-  // Initialize display
-  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
-  {
-    Serial.println(F("SSD1306 allocation failed"));
-    while (1);
-  }
-
-  // Initialize MAX30105
-  if (!particleSensor.begin(Wire)) 
-  {
-    Serial.println("MAX30105 not found. Check wiring.");
-    while (1);
-  }
-
-  // Sensor setup
-  particleSensor.setup(); 
-  particleSensor.setPulseAmplitudeRed(0x0A);
-  particleSensor.setPulseAmplitudeGreen(0);
-}
-
-void loop()
-{
-  long irValue = particleSensor.getIR();
-
-  // 🔥 Heartbeat detection
-  if (checkForBeat(irValue))
-  {
-    long delta = millis() - lastBeat;
-    lastBeat = millis();
-
-    beatsPerMinute = 60.0 / (delta / 1000.0);
-
-    if (beatsPerMinute > 40 && beatsPerMinute < 255)
-    {
-      rates[rateSpot++] = (byte)beatsPerMinute;
-      rateSpot %= RATE_SIZE;
-
-      beatAvg = 0;
-      for (byte x = 0; x < RATE_SIZE; x++)
-        beatAvg += rates[x];
-
-      beatAvg /= RATE_SIZE;
-    }
-  }
-
-  // Serial output (fast, no problem)
-  Serial.print("IR=");
-  Serial.print(irValue);
-  Serial.print(", BPM=");
-  Serial.print(beatsPerMinute);
-  Serial.print(", Avg BPM=");
-  Serial.println(beatAvg);
-
-  // 🔥 FIX 2: Update display only every 200ms
+  // Update display only every 200ms
   if (millis() - lastDisplayUpdate > displayInterval)
   {
     lastDisplayUpdate = millis();
