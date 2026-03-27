@@ -109,5 +109,3 @@ void loop()
     display.display();
   }
 }
-message.txt
-3 KB
