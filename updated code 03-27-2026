@@ -11,9 +11,23 @@ MAX30105 particleSensor;
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-const byte RATE_SIZE = 30;
+const byte RATE_SIZE = 10; // smaller but more stable
 byte rates[RATE_SIZE];
 byte rateSpot = 0;
+int validbeatcount=0;
+
+// Improved filtering
+;float filteredBPM =0;
+const float ALPHA = 0.3; // Low-pass filter coefficient (0.1-0.5)
+
+// Beat validation
+
+const float MIN_BPM = 50;
+const float MAX_BPM = 200;
+const long MIN_BEAT_INTERVAL = 300;  // 300ms min (200 BPM max)
+const long MAX_BEAT_INTERVAL = 1500; // 1.5s max (40 BPM min)
+
+
 
 long lastBeat = 0;
 float beatsPerMinute = 0;
@@ -21,7 +35,7 @@ int beatAvg = 0;
 
 // display timing control
 unsigned long lastDisplayUpdate = 0;
-const int displayInterval = 200; // ms
+const int displayInterval = 500; // ms
 
 void setup()
 {
@@ -30,7 +44,7 @@ void setup()
 
   // Set stable I2C speed
   Wire.begin();
-  Wire.setClock(100000); // 100kHz (important)
+  Wire.setClock(200000); // 100kHz (important)
 
   // Initialize display
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
@@ -56,15 +70,21 @@ void loop()
 {
   long irValue = particleSensor.getIR();
 
+ // FINGER DETECTION- only process if finger is present
+if (irValue > 50000)  // 
+  {
+ 
   // Heartbeat detection
   if (checkForBeat(irValue))
   {
     long delta = millis() - lastBeat;
-    lastBeat = millis();
-
+    
+    //BEAT VALIDATION
+    if (delta > MIN_BEAT_INTERVAL && delta < MAX_BEAT_INTERVAL)
+      {
     beatsPerMinute = 60.0 / (delta / 1000.0);
 
-    if (beatsPerMinute > 40 && beatsPerMinute < 255)
+    if (beatsPerMinute > 40 && beatsPerMinute < 255);
     {
       rates[rateSpot++] = (byte)beatsPerMinute;
       rateSpot %= RATE_SIZE;
@@ -107,5 +127,7 @@ void loop()
       display.println(F("No finger?"));
 
     display.display();
+  }
+  }
   }
 }
