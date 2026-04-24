@@ -2,9 +2,9 @@
 
 _**About This Project:**_
 
-**Wearable Sensor** is a QL Plus Project developed by X, Y, Z, and A.
+**Wearable Sensor** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
 
-This project's ultimate goal is to X.
+This project's ultimate goal is to create a device under $30 to display and measure user’s heartrate, temperature, SpO2 with 95% accuracy.
 
 Here's a demonstration of Wearable Sensor! https://youtu.be/xxxx
 
@@ -23,11 +23,22 @@ ELEGOO Breadboard 830 Point Solderless: [https://a.co/d/044U4O8P]
 
 _**Setup:**_
 
-1. Begin connecting...
+1. Go to https://www.arduino.cc/en/software/
+2. Download the latest verison of the Arduino IDE [We used verison 2.3.8 at the time of building]
+3. Open the "arduino-ide_X.X.X_OSNAME_64bit.exe" file
+4. Press "I Agree"
+5. Press "Next"
+6. Press "Install"
+7. After Arduino IDE downloads, Press "Finish"
+8. Once Arduino IDE opens, press on the "Library Manager" icon [Highlighted in white!] <img width="89" height="602" alt="image" src="https://github.com/user-attachments/assets/b1f1d16d-c4aa-49b5-88a9-ebf055225eec" />
+9. Search "Adafruit SSD1306" and Press "Install"
+10. Search "SparkFun MAX3010x Pulse and Proximity" and Press "Install"
+11. 
+
 
 
 **CONGRATULATIONS!!! 🥳 You've succesfully built your own Wearable Sensor that you can use and enjoy wherever you desire!**
 
 Thank you so much for taking the time to build your own! Feel free to modify the project fit your needs and share your creation with others!
 
--- X (X's email), Y (Y's email), Z (Z's email), A (A's email)
+-- Briana Sepulveda (briana.sepulveda@my.utsa.edu), Nanda Johnson (jananda.johnson@my.utsa.edu), Jessica Malakova (jessica.malakova@my.utsa.edu), Arturo Martinez (arturo.j.martinez.ii@gmail.com)
