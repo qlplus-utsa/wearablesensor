@@ -36,6 +36,7 @@ _**Setup:**_
 11. Open and Close the Arduino IDE to ensure the libraries are properly downloaded
 12. Go back to this Github and open the "wearablesensorcode" file
 <img width="762" height="289" alt="image" src="https://github.com/user-attachments/assets/2fec96d9-0d91-4a73-913b-f1754ead8525" />
+
 13. Click in the code and press "Ctrl + A", then "Ctrl + C"
 14. Go back to the Arduino IDE, click inside your workspace, press "Ctrl + A", then "Backspace", then press "Ctrl + V" to paste the code
 
