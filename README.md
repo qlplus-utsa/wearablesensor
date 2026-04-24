@@ -33,7 +33,15 @@ _**Setup:**_
 8. Once Arduino IDE opens, press on the "Library Manager" icon [Highlighted in white!] <img width="89" height="602" alt="image" src="https://github.com/user-attachments/assets/b1f1d16d-c4aa-49b5-88a9-ebf055225eec" />
 9. Search "Adafruit SSD1306" and Press "Install"
 10. Search "SparkFun MAX3010x Pulse and Proximity" and Press "Install"
-11. 
+11. Open and Close the Arduino IDE to ensure the libraries are properly downloaded
+12. Go back to this Github and open the "wearablesensorcode" file
+<img width="762" height="289" alt="image" src="https://github.com/user-attachments/assets/2fec96d9-0d91-4a73-913b-f1754ead8525" />
+13. Click in the code and press "Ctrl + A", then "Ctrl + C"
+14. Go back to the Arduino IDE, click inside your workspace, press "Ctrl + A", then "Backspace", then press "Ctrl + V" to paste the code
+
+Now, we can begin putting our Arduino, Sensor, and Screen together!
+
+15. ...
 
 
 
