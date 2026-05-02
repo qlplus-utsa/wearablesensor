@@ -4,9 +4,9 @@ _**About This Project:**_
 
 **Wearable Sensor** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
 
-This project's ultimate goal is to create a device under $30 to display and measure user’s heartrate and average hear rate with 95% accuracy.
+This project's ultimate goal is to create a device under $30 to measure and display user’s heartrate and average heart rate with 95% accuracy.
 
-Here's a demonstration of Wearable Sensor! https://youtu.be/xxxx
+Here's a demonstration of Wearable Sensor! [https://youtu.be/D9882Sl7dts?si=xfsRgESFx7WbDfMQ]
 
 _**Materials Used:**_
 
@@ -17,8 +17,6 @@ ELEGOO UNO R3 Board: [https://a.co/d/0aggOWlQ]
 Heart Rate Sensor Module MAX30102 (Arduino Compatible): [https://a.co/d/0g5pY85o]
 
 120pcs Breadboard Jumper Wires 20cm Wire: [https://a.co/d/08JQEu3K]
-
-ELEGOO Breadboard 830 Point Solderless: [https://a.co/d/044U4O8P]
 
 9V Battery Holder with DC Jack: [(https://a.co/d/0j7ZXtKE)]
 
