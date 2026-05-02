@@ -4,7 +4,7 @@ _**About This Project:**_
 
 **Wearable Sensor** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
 
-This project's ultimate goal is to create a device under $30 to measure and display user’s heartrate and average heartrate with 95% accuracy.
+This project's ultimate goal was to create a device under $30 to measure and display user’s heartrate and average heartrate with over 95% accuracy.
 
 Here's a demonstration of Wearable Sensor! [https://youtu.be/D9882Sl7dts?si=xfsRgESFx7WbDfMQ]
 
