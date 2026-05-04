@@ -1,6 +1,6 @@
 # Wearable Sensor
 
-_**About This Project:**_
+### _**About This Project:**_
 
 **Wearable Sensor** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
 
@@ -10,23 +10,21 @@ Here's a demonstration of Wearable Sensor! [https://youtu.be/D9882Sl7dts?si=xfsR
 
 ------
 
-_**Materials Used:**_
+## _**Materials Used:**_
 
-ELEGOO UNO R3 Board: [https://a.co/d/0aggOWlQ]
 
-0.96" OLED i2c Display Module Screen: [https://a.co/d/0e8LvMpk]
-
-Heart Rate Sensor Module MAX30102 (Arduino Compatible): [https://a.co/d/0g5pY85o]
-
-120pcs Breadboard Jumper Wires 20cm Wire: [https://a.co/d/08JQEu3K]
-
-9V Battery Holder with DC Jack: [(https://a.co/d/0j7ZXtKE)]
-
-9V Batteries: [(https://a.co/d/0j7ZXtKE)]
+| Item Name | Link |
+| --------- | --------- |
+| ELEGOO UNO R3 Board | https://a.co/d/0aggOWlQ |
+| 0.96" OLED i2c Display Module Screen | https://a.co/d/0e8LvMpk |
+| Heart Rate Sensor Module MAX30102  | https://a.co/d/0g5pY85o  |
+|  120pcs Breadboard Jumper Wires 20cm Wire | https://a.co/d/08JQEu3K  |
+|  9V Battery Holder with DC Jack | https://a.co/d/0j7ZXtKE |
+| 9V Batteries | https://a.co/d/0j7ZXtKE |
 
 ----
 
-_**Setup:**_
+## _**Setup:**_
 
 1. Go to https://www.arduino.cc/en/software/
 2. Download the latest verison of the Arduino IDE [We used verison 2.3.8 at the time of building]
