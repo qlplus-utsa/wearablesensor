@@ -1,12 +1,12 @@
-# Wearable Sensor
+# Sensor Team
 
 ### _**About This Project:**_
 
-**Wearable Sensor** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
+**Sensor Team** is a QL Plus Project developed by Briana Sepulveda, Nanda Johnson, Jessica Malakhova, and Arturo Martinez.
 
 This project's ultimate goal was to create a device under $30 to measure and display user’s current and average heart rate with over 95% accuracy.
 
-Here's a demonstration of Wearable Sensor! [https://youtu.be/D9882Sl7dts?si=xfsRgESFx7WbDfMQ]
+Here's a demonstration from Sensor Team! [https://youtu.be/D9882Sl7dts?si=xfsRgESFx7WbDfMQ]
 
 ------
 
@@ -37,8 +37,9 @@ Here's a demonstration of Wearable Sensor! [https://youtu.be/D9882Sl7dts?si=xfsR
 9. Search "Adafruit SSD1306" and Press "Install"
 10. Search "SparkFun MAX3010x Pulse and Proximity" and Press "Install"
 11. Open and Close the Arduino IDE to ensure the libraries are properly downloaded
-12. Go back to this Github and open the "wearablesensorcode" file
-<img width="762" height="289" alt="image" src="https://github.com/user-attachments/assets/2fec96d9-0d91-4a73-913b-f1754ead8525" />
+12. Go back to this Github and open the "sensorteamcode" file
+
+IMAGE HERE
 
 13. Click in the code and press "Ctrl + A", then "Ctrl + C"
 14. Go back to the Arduino IDE, click inside your workspace, press "Ctrl + A", then "Backspace", then press "Ctrl + V" to paste the code
@@ -69,7 +70,7 @@ Now we can begin the final assembly!
 
 ----
 
-**CONGRATULATIONS!!! 🥳 You've succesfully built your own Wearable Sensor that you can use and enjoy wherever you desire!**
+**CONGRATULATIONS!!! 🥳 You've succesfully built your own Heartrate Sensor that you can use and enjoy wherever you desire!**
 
 Thank you so much for taking the time to build your own! Feel free to modify the project fit your needs and share your creation with others!
 
