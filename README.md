@@ -41,7 +41,10 @@ https://github.com/user-attachments/assets/152a18be-d472-45ed-b883-41f66a900df6
 5. Press "Next"
 6. Press "Install"
 7. After Arduino IDE downloads, Press "Finish"
-8. Once Arduino IDE opens, press on the "Library Manager" icon [Highlighted in white!] <img width="89" height="602" alt="image" src="https://github.com/user-attachments/assets/b1f1d16d-c4aa-49b5-88a9-ebf055225eec" />
+8. Once Arduino IDE opens, press on the "Library Manager" icon [Highlighted in white!] 
+
+<img width="89" height="602" alt="image" src="https://github.com/user-attachments/assets/b1f1d16d-c4aa-49b5-88a9-ebf055225eec" />
+
 9. Search "Adafruit SSD1306" and Press "Install"
 10. Search "SparkFun MAX3010x Pulse and Proximity" and Press "Install"
 11. Open and Close the Arduino IDE to ensure the libraries are properly downloaded
